@@ -1,21 +1,29 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ignatenkovnikita
- * Date: 02/11/16
- * Time: 01:08
- * Web Site: http://IgnatenkovNikita.ru
- */
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Шаблоны';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="template-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
-<p>
-    This is the view content for action "<?= $this->context->action->id ?>".
-    The action belongs to the controller "<?= get_class($this->context) ?>"
-    in the "<?= $this->context->module->id ?>" module.
-</p>
-<p>
-    You may customize this page by editing the following file:<br>
-    <code><?= __FILE__ ?></code>
-</p>
+<div class="template-index">
+
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            [
+                'attribute' => 'title',
+                'value' => function($item) {
+                    return Html::a($item->title, ['default/update', 'id' => $item->id]);
+                },
+                'format' => 'raw'
+            ],
+            'message:raw',
+        ],
+    ]); ?>
 </div>

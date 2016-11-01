@@ -34,3 +34,12 @@ Once the extension is installed, simply use it in your code by  :
         ],
     ],
 ```
+
+Apply migration
+```bash
+./console/yii migrate --migrationPath=vendor/ignatenkovnikita/yii2-template-messages/migrations/ 
+```
+
+TODO
+- add suppport email
+- refactoring
