@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $model \ignatenkovnikita\template\models\Template */
 
 $this->title = 'Обновление шаблона: ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Email шаблоны', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => 'Шаблоны', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Обновление';
 ?>
 <div class="template-update">
