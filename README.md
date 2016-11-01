@@ -28,4 +28,9 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \ignatenkovnikita\template\AutoloadExample::widget(); ?>```
+'modules'=>[
+        'template' => [
+            'class' => 'ignatenkovnikita\template\Module',
+        ],
+    ],
+```
