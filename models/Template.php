@@ -62,7 +62,7 @@ class Template extends \yii\db\ActiveRecord
         return [];
     }
 
-    public function replace($templateId, $params)
+    public static function replace($templateId, $params)
     {
         /** @var Template $template */
         $template = Template::findOne($templateId);
