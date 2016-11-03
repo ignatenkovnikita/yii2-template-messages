@@ -50,6 +50,10 @@ class Template extends \yii\db\ActiveRecord
         ];
     }
 
+    /**
+     * Get placeholders
+     * @return array|mixed
+     */
     public function getPlaceholderList()
     {
         $data = json_decode($this->placeholders);
