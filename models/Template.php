@@ -66,6 +66,13 @@ class Template extends \yii\db\ActiveRecord
         return [];
     }
 
+    /**
+     * Replace text with placeholders
+     * 
+     * @param $templateId
+     * @param $params
+     * @return mixed
+     */
     public static function replace($templateId, $params)
     {
         /** @var Template $template */
