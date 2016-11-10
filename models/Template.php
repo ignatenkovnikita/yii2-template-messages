@@ -78,11 +78,17 @@ class Template extends \yii\db\ActiveRecord
         /** @var Template $template */
         $template = Template::findOne($templateId);
 
-        $message = $template->message;
-        foreach ($params as $param => $value) {
-            $param = '{' . $param . '}';
-            $message = str_replace($param, $value, $message);
+        if($template){
+            $message = $template->message;
+            foreach ($params as $param => $value) {
+                $param = '{' . $param . '}';
+                $message = str_replace($param, $value, $message);
+            }
         }
+        else{
+            $message = 'Template '.$templateId .' not found';
+        }
+
         
         return $message;
     }
