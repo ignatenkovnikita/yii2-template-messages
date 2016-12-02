@@ -35,6 +35,14 @@ Once the extension is installed, simply use it in your code by  :
     ],
 ```
 
+In Code uses
+```php
+Template::replace('template_name', [
+        'your_variable' => 'value
+]);
+```
+
+
 Apply migration
 ```bash
 ./console/yii migrate --migrationPath=vendor/ignatenkovnikita/yii2-template-messages/migrations/ 
