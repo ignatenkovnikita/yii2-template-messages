@@ -4,7 +4,7 @@ use yii\db\Migration;
 
 class m161101_224359_init extends Migration
 {
-    public function up()
+    public function safeUp()
     {
         $this->createTable('{{%template}}', [
             'id'=> $this->string()->unique(),
@@ -13,11 +13,11 @@ class m161101_224359_init extends Migration
             'message' => $this->text(),
         ]);
 
-        $this->addPrimaryKey('pk_mail_template', '{{%template}}', 'id');
+        $this->addPrimaryKey('pk_template', '{{%template}}', 'id');
 
     }
 
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%template}}');
     }
