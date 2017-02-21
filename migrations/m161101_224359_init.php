@@ -9,7 +9,7 @@ class m161101_224359_init extends Migration
         $this->createTable('{{%template}}', [
             'id'=> $this->string()->unique(),
             'title' => $this->string()->notNull(),
-            'placeholders' => $this->string()->notNull(),
+            'placeholders' => $this->string(),
             'message' => $this->text(),
         ]);
 
@@ -19,6 +19,8 @@ class m161101_224359_init extends Migration
 
     public function safeDown()
     {
+        $this->dropPrimaryKey('pk_template', '{{%template}}');
+
         $this->dropTable('{{%template}}');
     }
 

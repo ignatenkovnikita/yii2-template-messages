@@ -31,7 +31,7 @@ class Template extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'placeholders'], 'required'],
+            [['title', 'message'], 'required'],
             [['message'], 'string'],
             [['title', 'placeholders'], 'string', 'max' => 255],
         ];
