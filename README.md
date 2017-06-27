@@ -2,6 +2,8 @@ Template Message with placeholder
 =================================
 Template Message with placeholder
 
+[![Latest Stable Version](https://poser.pugx.org/ignatenkovnikita/yii2-template-messages/v/stable)](https://packagist.org/packages/ignatenkovnikita/yii2-template-messages) [![Total Downloads](https://poser.pugx.org/ignatenkovnikita/yii2-template-messages/downloads)](https://packagist.org/packages/ignatenkovnikita/yii2-template-messages) [![Latest Unstable Version](https://poser.pugx.org/ignatenkovnikita/yii2-template-messages/v/unstable)](https://packagist.org/packages/ignatenkovnikita/yii2-template-messages) [![License](https://poser.pugx.org/ignatenkovnikita/yii2-template-messages/license)](https://packagist.org/packages/ignatenkovnikita/yii2-template-messages)
+
 Installation
 ------------
 
