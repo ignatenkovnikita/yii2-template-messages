@@ -48,8 +48,10 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
+        $class = Yii::$app->controller->module->modelClass;
+        $query = call_user_func(array($class, 'find'));
         $dataProvider = new ActiveDataProvider([
-            'query' => Template::find(),
+            'query' => $query,
         ]);
 
         $dataProvider->sort->defaultOrder = ['id' => SORT_ASC];

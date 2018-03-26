@@ -9,11 +9,15 @@
 
 namespace ignatenkovnikita\template;
 
+use ignatenkovnikita\template\models\Template;
+
 /**
  * template module definition class
  */
 class Module extends \yii\base\Module
 {
+
+    public $modelClass = Template::class;
     /**
      * @inheritdoc
      */
