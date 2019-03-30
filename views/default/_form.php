@@ -31,7 +31,8 @@ $this->registerJsFile($jsPath[1], ['depends' => [\yii\web\JqueryAsset::className
         \yii\imperavi\Widget::className(),
         [
             'plugins' => ['source'],
-            'htmlOptions' => ['id' => 'template-redactor']
+            'htmlOptions' => ['id' => 'template-redactor'],
+            'options' => json_decode($model->widget_options,true),
 
         ]
     ); ?>
