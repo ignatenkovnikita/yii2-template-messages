@@ -12,6 +12,7 @@ namespace ignatenkovnikita\template\models;
 
 /**
  * @property mixed message
+ * @property mixed widget_options
  * @property mixed title
  * @property mixed placeholders
  */
@@ -32,7 +33,7 @@ class Template extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'message'], 'required'],
-            [['message'], 'string'],
+            [['message','widget_options'], 'string'],
             [['title', 'placeholders'], 'string', 'max' => 255],
         ];
     }
