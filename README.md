@@ -44,6 +44,26 @@ Template::replace('template_name', [
 ]);
 ```
 
+Example
+Add in migration 
+```php
+  $rows = [
+            [
+                'promo-code-send',
+                'Отправка купона пользователю',
+                '["promo_code"]',
+                'Трэк {promo_code}'
+            ],
+
+        ];
+
+        $this->batchInsert('{{template}}', ['id', 'title', 'placeholders', 'message'], $rows);
+
+
+        $this->update('{{%template}}',['widget_options' => '{"toolbar":false,"pastePlainText":true,"buttonSource":true,"paragraphize":false}']);
+
+```
+
 
 Apply migration
 ```bash
